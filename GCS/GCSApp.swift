@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct GCSApp: App {
+    @AppStorage("isDarkMode") private var isDarkMode = true
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+            
+                .preferredColorScheme(isDarkMode ? .dark : .light)
+                .accentColor(.primary)
         }
     }
 }
