@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MotorResponsivenessView: View {
 	@Binding var selectedMotor: MotorResponsiveness
+	var options: [MotorResponsiveness] = MotorResponsiveness.adultOptions
     var body: some View {
 		 VStack() {
 			 Text("MOTOR")
@@ -25,7 +26,7 @@ struct MotorResponsivenessView: View {
 						 .font(.subheadline.scaled)
 					 Spacer()
 					 Picker("Motor", selection: $selectedMotor) {
-						 ForEach(MotorResponsiveness.allCases, id: \.self) {
+						 ForEach(options, id: \.self) {
 							 Text($0.title)
 						 }
 						 

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct VerbalResponsivenessView: View {
 	@Binding var selectedVerbal: VerbalResponsiveness
-	var options: [VerbalResponsiveness] = VerbalResponsiveness.allCases
+	var options: [VerbalResponsiveness] = VerbalResponsiveness.adultOptions
 
     var body: some View {
 		 VStack() {
@@ -27,7 +27,7 @@ struct VerbalResponsivenessView: View {
 							 .font(.subheadline.scaled)
 						 Spacer()
 						 Picker("Verbal", selection: $selectedVerbal) {
-							 ForEach(VerbalResponsiveness.allCases, id: \.self) {
+							 ForEach(options, id: \.self) {
 								 Text($0.title)
 							 }
 							 

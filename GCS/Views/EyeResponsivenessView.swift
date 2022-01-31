@@ -9,7 +9,8 @@ import SwiftUI
 
 struct EyeResponsivenessView: View {
 	@Binding var selectedEye: EyeResponsiveness
-	
+	var options: [EyeResponsiveness] = EyeResponsiveness.adultOptions
+
     var body: some View {
 		VStack() {
 			Text("EYE OPENING")
@@ -26,7 +27,7 @@ struct EyeResponsivenessView: View {
 						.font(.subheadline.scaled)
 					Spacer()
 					Picker("Eye", selection: $selectedEye) {
-						ForEach(EyeResponsiveness.allCases, id: \.self) {
+						ForEach(options, id: \.self) {
 							Text($0.title)
 						}
 					}

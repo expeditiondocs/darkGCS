@@ -23,6 +23,7 @@
 		ACB815F227946ADE00DBDAEF /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB815F127946ADE00DBDAEF /* BackgroundView.swift */; };
 		ACB815F527946C9E00DBDAEF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB815F427946C9E00DBDAEF /* SettingsView.swift */; };
 		B534F7A027A80E03004F174C /* MotorResponsivenessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B534F79F27A80E03004F174C /* MotorResponsivenessView.swift */; };
+		B534F7A227A82C9C004F174C /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B534F7A127A82C9B004F174C /* ScoreView.swift */; };
 		B5F1E0B927A70902005E1CE1 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F1E0B827A70902005E1CE1 /* Fonts.swift */; };
 		B5F1E0BB27A7FC8B005E1CE1 /* DiagnosticEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F1E0BA27A7FC8B005E1CE1 /* DiagnosticEnums.swift */; };
 		B5F1E0BD27A80436005E1CE1 /* EyeResponsivenessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F1E0BC27A80436005E1CE1 /* EyeResponsivenessView.swift */; };
@@ -48,6 +49,7 @@
 		ACB815F427946C9E00DBDAEF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B534F79D27A6D536004F174C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B534F79F27A80E03004F174C /* MotorResponsivenessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorResponsivenessView.swift; sourceTree = "<group>"; };
+		B534F7A127A82C9B004F174C /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		B5F1E0B827A70902005E1CE1 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		B5F1E0BA27A7FC8B005E1CE1 /* DiagnosticEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticEnums.swift; sourceTree = "<group>"; };
 		B5F1E0BC27A80436005E1CE1 /* EyeResponsivenessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeResponsivenessView.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				AC8F9C9E277CED2700BD9787 /* AdultView.swift */,
+				B534F7A127A82C9B004F174C /* ScoreView.swift */,
 				AC8F9CA0277CED2F00BD9787 /* PedsView.swift */,
 				B5F1E0BA27A7FC8B005E1CE1 /* DiagnosticEnums.swift */,
 				AC7AF35227A441C400139DE9 /* AboutGCS.swift */,
@@ -215,6 +218,7 @@
 				B534F7A027A80E03004F174C /* MotorResponsivenessView.swift in Sources */,
 				ACB815F527946C9E00DBDAEF /* SettingsView.swift in Sources */,
 				AC17758D278F097400C372B8 /* Color.swift in Sources */,
+				B534F7A227A82C9C004F174C /* ScoreView.swift in Sources */,
 				AC8F9C9F277CED2700BD9787 /* AdultView.swift in Sources */,
 				AC862EBE2772993500F46979 /* ContentView.swift in Sources */,
 				AC7AF35327A441C400139DE9 /* AboutGCS.swift in Sources */,
