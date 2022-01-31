@@ -11,9 +11,9 @@ import MessageUI
 struct SettingsView: View {
 	
 	@AppStorage("isDarkMode") private var isDarkMode = true
-	
+	@AppStorage("adjustedFontSize") private var fontSize = 14.0
+
 	@State private var isAdjustFont = false
-	@State private var fontSize: CGFloat = 14.0
 	@State private var showDeveloperInfo = false
 	@State private var isInfoPresented = false
 	@State private var isShowingMailView = false
