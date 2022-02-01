@@ -10,11 +10,13 @@ import SwiftUI
 struct MotorResponsivenessView: View {
 	@Binding var selectedMotor: MotorResponsiveness
 	var options: [MotorResponsiveness] = MotorResponsiveness.adultOptions
+	let fontSize: Double
+	
     var body: some View {
 		 VStack() {
 			 Text("MOTOR")
 				 .foregroundColor(.primary)
-				 .font(.title3.scaled)
+				 .font(.title3.scaled(for: fontSize))
 				 .fontWeight(.bold)
 				 .frame(maxWidth: .infinity, alignment: .leading)
 				 .padding([.horizontal, .top])
@@ -23,11 +25,12 @@ struct MotorResponsivenessView: View {
 				 HStack {
 					 Text("Calculate best response")
 						 .foregroundColor(.primary)
-						 .font(.subheadline.scaled)
+						 .font(.subheadline.scaled(for: fontSize))
 					 Spacer()
 					 Picker("Motor", selection: $selectedMotor) {
 						 ForEach(options, id: \.self) {
 							 Text($0.title)
+								 .font(.body.scaled(for: fontSize))
 						 }
 						 
 					 }
@@ -42,13 +45,13 @@ struct MotorResponsivenessView: View {
 				 HStack {
 					 Text(selectedMotor.label)
 						 .foregroundColor(.secondary)
-						 .font(.subheadline.scaled)
+						 .font(.subheadline.scaled(for: fontSize))
 						 .lineLimit(3)
 
 					 Spacer()
 					 
 					 Text(selectedMotor.scoreString)
-						 .font(.headline.scaled)
+						 .font(.headline.scaled(for: fontSize))
 						 .opacity(0.7)
 						 .padding(.horizontal)
 
@@ -64,6 +67,6 @@ struct MotorResponsivenessView: View {
 
 struct MotorResponsivenessView_Previews: PreviewProvider {
     static var previews: some View {
-		 MotorResponsivenessView(selectedMotor: .constant(.unchecked))
+		 MotorResponsivenessView(selectedMotor: .constant(.unchecked), fontSize: 14)
     }
 }

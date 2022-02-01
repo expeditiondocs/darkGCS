@@ -11,7 +11,9 @@ struct PedsView: View {
 	@State private var selectedEye = EyeResponsiveness.uncheckedPede
 	@State private var selectedVerbal = VerbalResponsiveness.uncheckedPede
 	@State private var selectedMotor = MotorResponsiveness.uncheckedPede
-	
+
+	let fontSize: Double
+
 	var body: some View {
 		NavigationView {
 			ZStack {
@@ -19,9 +21,9 @@ struct PedsView: View {
 				
 				ScrollView {
 					VStack(alignment: .leading, spacing: 0) {
-						EyeResponsivenessView(selectedEye: $selectedEye, options: EyeResponsiveness.pedeOptions)
-						VerbalResponsivenessView(selectedVerbal: $selectedVerbal, options: VerbalResponsiveness.pedeOptions)
-						MotorResponsivenessView(selectedMotor: $selectedMotor, options: MotorResponsiveness.pedeOptions)
+						EyeResponsivenessView(selectedEye: $selectedEye, options: EyeResponsiveness.pedeOptions, fontSize: fontSize)
+						VerbalResponsivenessView(selectedVerbal: $selectedVerbal, options: VerbalResponsiveness.pedeOptions, fontSize: fontSize)
+						MotorResponsivenessView(selectedMotor: $selectedMotor, options: MotorResponsiveness.pedeOptions, fontSize: fontSize)
 
 
 						ScoreView(selectedEye: selectedEye, selectedVerbal: selectedVerbal, selectedMotor: selectedMotor)

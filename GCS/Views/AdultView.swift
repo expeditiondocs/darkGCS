@@ -11,6 +11,8 @@ struct AdultView: View {
 	@State private var selectedEye = EyeResponsiveness.unchecked
 	@State private var selectedVerbal = VerbalResponsiveness.unchecked
 	@State private var selectedMotor = MotorResponsiveness.unchecked
+	
+	let fontSize: Double
 
     var body: some View {
         
@@ -19,9 +21,9 @@ struct AdultView: View {
 				  BackgroundView()
 				  ScrollView {
 					  VStack(alignment: .leading, spacing: 0) {
-						  EyeResponsivenessView(selectedEye: $selectedEye)
-						  VerbalResponsivenessView(selectedVerbal: $selectedVerbal)
-						  MotorResponsivenessView(selectedMotor: $selectedMotor)
+						  EyeResponsivenessView(selectedEye: $selectedEye, fontSize: fontSize)
+						  VerbalResponsivenessView(selectedVerbal: $selectedVerbal, fontSize: fontSize)
+						  MotorResponsivenessView(selectedMotor: $selectedMotor, fontSize: fontSize)
 
 						  Spacer()
 						  

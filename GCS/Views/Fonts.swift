@@ -8,13 +8,13 @@
 import SwiftUI
 
 extension Font {
-	var scalingFactor: Double {
-		let preferredSize = UserDefaults.standard.double(forKey: "adjustedFontSize")
-		if preferredSize == 0 { return 1.0 }
+	func scalingFactor(for fontSize: Double) -> Double {
+		let preferredSize = fontSize
 		return (preferredSize) / 14.0
 	}
-	var scaled: Font {
-		Font.system(size: systemSize * scalingFactor)
+	
+	func scaled(for fontSize: Double) -> Font {
+		Font.system(size: systemSize * scalingFactor(for: fontSize))
 	}
 	
 	var systemSize: Double {

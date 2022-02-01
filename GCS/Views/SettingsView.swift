@@ -11,7 +11,7 @@ import MessageUI
 struct SettingsView: View {
 	
 	@AppStorage("isDarkMode") private var isDarkMode = true
-	@AppStorage("adjustedFontSize") private var fontSize = 14.0
+	@Binding var fontSize: Double
 
 	@State private var isAdjustFont = false
 	@State private var showDeveloperInfo = false
@@ -137,6 +137,6 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
 	static var previews: some View {
-		SettingsView()
+		SettingsView(fontSize: .constant(14))
 	}
 }

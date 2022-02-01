@@ -10,12 +10,13 @@ import SwiftUI
 struct EyeResponsivenessView: View {
 	@Binding var selectedEye: EyeResponsiveness
 	var options: [EyeResponsiveness] = EyeResponsiveness.adultOptions
+	let fontSize: Double
 
     var body: some View {
 		VStack() {
 			Text("EYE OPENING")
 				.foregroundColor(.primary)
-				.font(.title3.scaled)
+				.font(.title3.scaled(for: fontSize))
 				.fontWeight(.bold)
 				.frame(maxWidth: .infinity, alignment: .leading)
 				.padding([.horizontal, .top])
@@ -24,11 +25,12 @@ struct EyeResponsivenessView: View {
 				HStack {
 					Text("Calculate best response")
 						.foregroundColor(.primary)
-						.font(.subheadline.scaled)
+						.font(.subheadline.scaled(for: fontSize))
 					Spacer()
 					Picker("Eye", selection: $selectedEye) {
 						ForEach(options, id: \.self) {
 							Text($0.title)
+								.font(.body.scaled(for: fontSize))
 						}
 					}
 					.pickerStyle(.menu)
@@ -42,12 +44,12 @@ struct EyeResponsivenessView: View {
 				HStack {
 					Text(selectedEye.label)
 						.foregroundColor(.secondary)
-						.font(.subheadline.scaled)
+						.font(.subheadline.scaled(for: fontSize))
 						.lineLimit(3)
 					
 					Spacer()
 					Text(selectedEye.scoreString)
-						.font(.headline.scaled)
+						.font(.headline.scaled(for: fontSize))
 						.opacity(0.7)
 						.padding(.horizontal)
 				}
@@ -61,6 +63,6 @@ struct EyeResponsivenessView: View {
 
 struct EyeResponsivenessView_Previews: PreviewProvider {
     static var previews: some View {
-		 EyeResponsivenessView(selectedEye: .constant(.unchecked))
+		 EyeResponsivenessView(selectedEye: .constant(.unchecked), fontSize: 14)
     }
 }
