@@ -20,7 +20,7 @@ struct ScoreView: View {
 			
 			if !selectedEye.isUnchecked && !selectedVerbal.isUnchecked && !selectedMotor.isUnchecked {
 				
-				Text("GCS Scale = E(\(selectedEye.score)) V(\(selectedVerbal.score)) M(\(selectedMotor.score))")
+				Text("GCS Scale = E(\(selectedEye.scoreString)) V(\(selectedVerbal.scoreString)) M(\(selectedMotor.scoreString))")
 					.foregroundColor(.primary)
 					.font(.title3)
 					.fontWeight(.bold)

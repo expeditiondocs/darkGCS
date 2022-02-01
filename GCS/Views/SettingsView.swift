@@ -30,7 +30,7 @@ struct SettingsView: View {
 				BackgroundView()
 				
 				List {
-					Section(header: Text("More Info")) {
+					Section(header: Text("More Info").font(.headline.scaled(for: fontSize))) {
 							NavigationLink(destination: AboutGCS()) {
 							Text("About the Glasgow Coma Scale")
 						}
@@ -43,7 +43,7 @@ struct SettingsView: View {
 						}
 					}
 					
-					Section(header: Text("Feedback")) {
+					Section(header: Text("Feedback").font(.headline.scaled(for: fontSize))) {
 						
 						HStack {
 							Text("Pease leave us a review!!!")
@@ -76,7 +76,7 @@ struct SettingsView: View {
 						}
 					}
 					
-					Section(header: Text("Appearance")) {
+					Section(header: Text("Appearance").font(.headline.scaled(for: fontSize))) {
 						Toggle(isOn: $isDarkMode.animation()) {
 							HStack {
 								Text("Dark mode")
@@ -96,7 +96,7 @@ struct SettingsView: View {
 					}
 					
 					
-					Section(header: Text("App Info")) {
+					Section(header: Text("App Info").font(.headline.scaled(for: fontSize))) {
 						Toggle(isOn: $showDeveloperInfo.animation()) {
 							Text("Show App/Developer Information")
 						}
@@ -119,6 +119,7 @@ struct SettingsView: View {
 						}
 					}
 				}
+				.font(.title3.scaled(for: fontSize))
 				.listStyle(GroupedListStyle())
 				.background(.clear)
 				.onAppear {

@@ -119,7 +119,6 @@
 			children = (
 				AC862EBD2772993500F46979 /* ContentView.swift */,
 				AC8F9C9E277CED2700BD9787 /* AdultView.swift */,
-				B534F7A127A82C9B004F174C /* ScoreView.swift */,
 				AC8F9CA0277CED2F00BD9787 /* PedsView.swift */,
 				B5F1E0BA27A7FC8B005E1CE1 /* DiagnosticEnums.swift */,
 				AC7AF35227A441C400139DE9 /* AboutGCS.swift */,
@@ -131,6 +130,7 @@
 				B534F79F27A80E03004F174C /* MotorResponsivenessView.swift */,
 				B5F1E0BC27A80436005E1CE1 /* EyeResponsivenessView.swift */,
 				B5F1E0BE27A80484005E1CE1 /* VerbalResponsivenessView.swift */,
+				B534F7A127A82C9B004F174C /* ScoreView.swift */,
 				B5F1E0B827A70902005E1CE1 /* Fonts.swift */,
 			);
 			path = Views;
